@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation"
+    app:startDestination="@id/mainUserFragment">
+
+    <fragment
+        android:id="@+id/mainUserFragment"
+        android:name="com.conamobile.cutecut.fragment.MainUserFragment"
+        android:label="fragment_main_user"
+        tools:layout="@layout/fragment_main_user">
+        <action
+            android:id="@+id/action_mainUserFragment_to_homeUserFragment"
+            app:destination="@id/homeUserFragment" />
+        <action
+            android:id="@+id/action_mainUserFragment_to_barberHistoryFragment"
+            app:destination="@id/barberHistoryFragment" />
+        <action
+            android:id="@+id/action_mainUserFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeUserFragment"
+        android:name="com.conamobile.cutecut.fragment.HomeUserFragment"
+        android:label="fragment_home_user"
+        tools:layout="@layout/fragment_home_user" />
+    <fragment
+        android:id="@+id/barberHistoryFragment"
+        android:name="com.conamobile.cutecut.BarberHistoryFragment"
+        android:label="fragment_barber_history"
+        tools:layout="@layout/fragment_barber_history" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.conamobile.cutecut.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+</navigation>
